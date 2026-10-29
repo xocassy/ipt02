@@ -1,0 +1,109 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>StudentHub</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Welcome Section -->
+  <div class="welcome-banner">
+    <h1>Welcome to StudentHub!</h1>
+    <p>Your simple student directory</p>
+    <span>BS Information Technology 3-F</span>
+  </div>
+
+  <!-- Statistics Section -->
+  <h2 class="section-title">Student Overview</h2>
+
+  <div class="stats-container">
+
+    <!-- Total Students -->
+    <ion-card class="stat-card total-card">
+      <ion-card-content>
+        <div class="stat-icon">🎓</div>
+        <h2>{{ totalStudents }}</h2>
+        <p>Total Students</p>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Male Students -->
+    <ion-card class="stat-card male-card">
+      <ion-card-content>
+        <div class="stat-icon">👨</div>
+        <h2>{{ maleStudents }}</h2>
+        <p>Male Students</p>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Female Students -->
+    <ion-card class="stat-card female-card">
+      <ion-card-content>
+        <div class="stat-icon">👩</div>
+        <h2>{{ femaleStudents }}</h2>
+        <p>Female Students</p>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+  <!-- Student List Section -->
+  <div class="list-heading">
+    <div>
+      <h2 class="section-title">Student List</h2>
+      <p class="subtitle">All registered students</p>
+    </div>
+
+    <ion-button
+      size="small"
+      fill="outline"
+      (click)="toggleStudents()"
+    >
+      {{ showStudents ? 'Hide' : 'Show' }}
+    </ion-button>
+  </div>
+
+  <!-- Show Students -->
+  @if (showStudents) {
+
+    @for (student of students; track student.id) {
+
+      <ion-card class="student-card">
+        <ion-card-content>
+
+          <div class="student-info">
+
+            <div class="student-avatar">
+              {{ student.name.charAt(0) }}
+            </div>
+
+            <div class="student-details">
+              <h3>{{ student.name }}</h3>
+              <p>{{ student.course }}</p>
+              <span>Year {{ student.year }} · {{ student.gender }}</span>
+            </div>
+
+          </div>
+
+        </ion-card-content>
+      </ion-card>
+
+    }
+
+  } @else {
+
+    <div class="empty-message">
+      <div class="empty-icon">📚</div>
+      <h3>Student list is hidden</h3>
+      <p>Press the Show button to view the students.</p>
+    </div>
+
+  }
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>StudentHub · Student Directory</p>
+  </div>
+
+</ion-content>

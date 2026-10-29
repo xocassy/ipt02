@@ -1,0 +1,213 @@
+
+ion-content {
+  --background: #f7f7fb;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+  background: linear-gradient(135deg, #6554c0, #8b7de0);
+  color: white;
+  padding: 22px 18px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.welcome-banner h1 {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+.welcome-banner p {
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+
+.welcome-banner span {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Section Headings */
+.section-title {
+  color: #29254a;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 12px;
+}
+
+.subtitle {
+  color: #77758b;
+  font-size: 13px;
+  margin: -5px 0 0;
+}
+
+/* Statistics Cards */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  margin: 0;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card ion-card-content {
+  padding: 14px 5px;
+}
+
+.total-card {
+  --background: #eae6ff;
+}
+
+.male-card {
+  --background: #e3f2fd;
+}
+
+.female-card {
+  --background: #fce4ec;
+}
+
+.stat-icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.stat-card h2 {
+  color: #29254a;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.stat-card p {
+  color: #55516b;
+  font-size: 11px;
+  margin: 0;
+}
+
+/* Student List Heading */
+.list-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.list-heading .section-title {
+  margin-bottom: 10px;
+}
+
+.list-heading ion-button {
+  --border-radius: 10px;
+  margin: 0;
+}
+
+/* Student Cards */
+.student-card {
+  margin: 0 0 12px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.student-card ion-card-content {
+  padding: 14px;
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.student-avatar {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 50%;
+  background: #eae6ff;
+  color: #6554c0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.student-details h3 {
+  color: #29254a;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 5px;
+}
+
+.student-details p {
+  color: #666477;
+  font-size: 12px;
+  margin: 0 0 5px;
+}
+
+.student-details span {
+  color: #8a879a;
+  font-size: 11px;
+}
+
+/* Hidden List Message */
+.empty-message {
+  background: white;
+  padding: 30px 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 35px;
+}
+
+.empty-message h3 {
+  color: #29254a;
+  font-size: 17px;
+}
+
+.empty-message p {
+  color: #77758b;
+  font-size: 13px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 18px 0 8px;
+  color: #9996a8;
+  font-size: 12px
+}
+
+/* Small Screens */
+@media (max-width: 360px) {
+  .stats-container {
+    gap: 5px;
+  }
+
+  .stat-card ion-card-content {
+    padding: 12px 3px;
+  }
+
+  .stat-card p {
+    font-size: 10px;
+  }
+
+  .stat-card h2 {
+    font-size: 21px;
+  }
+
+  .welcome-banner h1 {
+    font-size: 20px;
+  }
+}
