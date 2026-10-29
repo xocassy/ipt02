@@ -1,0 +1,7 @@
+{
+  "name": "studentHub",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
